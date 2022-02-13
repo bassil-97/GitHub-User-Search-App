@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6, small {
 .avatar {
     width: 100%;
     border-radius: 50%;
-    outline: 1px solid lightgray;
+    border: 1px solid lightgray;
 }
 
 .profile__header {
@@ -158,7 +158,7 @@ h1, h2, h3, h4, h5, h6, small {
         flex-direction: column;
     }
 
-    ..profile_socials {
+    .profile_socials {
         flex-direction: column;
     }
 }
