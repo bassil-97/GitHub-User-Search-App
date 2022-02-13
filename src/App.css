@@ -1,38 +1,164 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+h1, h2, h3, h4, h5, h6, small {
+    margin: 0px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.spinner-border {
+    margin: 0 auto;
+}
+
 .App {
-  text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #141C2F;
+    color: white;
+    padding: 10px 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App > .container {
+    max-width: 40rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app__title {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    font-size: 1.3em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search__container {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6px;
+    background-color: #1F2A48;
 }
 
-.App-link {
-  color: #61dafb;
+.search__container > i {
+    color: #285ca5;
+    font-size: 1.5em;
+    margin-right: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search__container > input {
+    display: flex;
+    flex: 1;
+    margin-right: 10px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+}
+
+.search__container > input::placeholder {
+    font-family: 'Ubuntu Mono', monospace;
+    color: white;
+}
+
+.search__container > button {
+    font-family: 'Ubuntu Mono', monospace;
+    padding: 6px 16px;
+    border-radius: 8px;
+}
+
+.user__profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 12px;
+    background-color: #1F2A48;
+    border-radius: 6px;
+}
+
+.avatar {
+    width: 100%;
+    border-radius: 50%;
+    outline: 1px solid lightgray;
+}
+
+.profile__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.username {
+    color: #285ca5;
+    font-weight: bold;
+}
+
+.profile__bio {
+    margin: 20px 0px;
+    color: lightgray;
+}
+
+.repo_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #141C2F;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.repo_info > div > small {
+    color: gray;
+}
+
+.repo_title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.profile_socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.media_item {
+    display: flex;
+    flex: 1 0 40%;
+    margin: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+    .col-lg-3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .avatar {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .profile__header {
+        display: flex;
+        flex-direction: column;
+    }
+
+    ..profile_socials {
+        flex-direction: column;
+    }
 }
